@@ -1,12 +1,18 @@
 @use "sass:color";
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
-$font-family-serif: "Georgia", "Times New Roman", serif;
+$numbers: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
 
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
-
-$mqMinWidth: 420px;
+@each $number in $numbers {
+  .decoration-#{$number} {
+    text-decoration-thickness: #{$number}px!important;
+  }
+  .hover-decoration-#{$number}:hover {
+    text-decoration-thickness: #{$number}px!important;
+  }
+  .underline-offset-#{$number} {
+    text-underline-offset: #{$number}px!important;
+  }
+  .hover-underline-offset-#{$number}:hover {
+    text-underline-offset: #{$number}px!important;
+  }
+}

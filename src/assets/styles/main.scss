@@ -6,7 +6,6 @@
 /**
  * Import variables
  */
-
 @import "variables";
 
 /**
@@ -17,7 +16,25 @@
 
 // @import "some-node-module";
 // @import "@some-company/some-node-module";
+@import "../../../node_modules/@fortawesome/fontawesome-free/css/all.css";
 
+@tailwind base;
+@tailwind components;
+@tailwind screen;
+@tailwind utilities;
+
+@layer components {
+  .footer {
+    @apply grid grid-cols-footer md:grid-cols-footer_md grid-rows-footer md:grid-rows-footer_md pt-8 pb-2 w-full gap-2 text-white text-center bg-gradient-to-r from-octopus-500 via-octopus_accent-500 to-octopus_bg-500;
+    
+  }
+  nav ul li {
+    @apply block my-2 uppercase md:inline-block;
+    a {
+      @apply tracking-widest hover:underline hover:font-semibold;
+    }
+  }
+}
 /**
  * Import layouts
  * It's a best practice to use a different partial for each page
