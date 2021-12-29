@@ -39,9 +39,9 @@
     }
   }
   .portada {
-    @apply grid w-full h-screen bg-black grid-cols-portada md:grid-cols-portada_md
-    grid-rows-portada md:grid-rows-portada_md
-    bg-gradient-to-r from-black via-black to-current_play text-white;
+    @apply grid w-full h-screen bg-black grid-cols-portada grid-rows-portada
+    md:grid-cols-portada_md md:grid-rows-portada_md
+    bg-gradient-to-b md:bg-gradient-to-r from-black via-black to-current_play text-white;
   }
   .portada ul li {
     @apply mb-4 mt-4 border-t border-b border-gray-900 border-solid flex flex-row justify-between;
