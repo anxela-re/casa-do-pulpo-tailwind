@@ -25,13 +25,13 @@
 @font-face {
   font-family: "Raleway";
   src: local("Raleway"),
-    url(../fonts/Raleway-VariableFont_wght.ttf) format("truetype");
+    url(../fonts/Raleway/Raleway-VariableFont_wght.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "Merriweather";
   src: local("Merriweather"),
-    url(../fonts/Merriweather-Regular.ttf) format("truetype");
+    url(../fonts/Merriweather/Merriweather-Regular.ttf) format("truetype");
 }
 
 @tailwind utilities;

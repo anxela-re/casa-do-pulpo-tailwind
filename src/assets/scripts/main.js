@@ -25,42 +25,44 @@
     }
     return "desktop";
   };
-  
-  let showSchedule = false;
-  let btnClick = false;
-  const deviceType = getDeviceType();
-  const btnPortada = document.querySelector(".info-btn");
-  let portadaEl = document.querySelector(".portada");
-  if (deviceType === "mobile") {
-    portadaEl.classList.add("mobile");
-  }
-  if (btnPortada) {
-    if (deviceType !== "mobile") {
-      btnPortada.addEventListener("mouseenter", () => {
-        if (!btnClick) {
-          showSchedule = true;
-          toggleShowSchedule();
-        }
-      });
-      btnPortada.addEventListener("mouseleave", () => {
-        if (!btnClick) {
-          showSchedule = false;
-          toggleShowSchedule();
-        }
+
+  window.addEventListener("load", () => {
+    let showSchedule = false;
+    let btnClick = false;
+    const deviceType = getDeviceType();
+    const btnPortada = document.querySelector(".info-btn");
+    let portadaEl = document.querySelector(".portada");
+    if (deviceType === "mobile") {
+      portadaEl.classList.add("mobile");
+    }
+    if (btnPortada) {
+      if (deviceType !== "mobile") {
+        btnPortada.addEventListener("mouseenter", () => {
+          if (!btnClick) {
+            showSchedule = true;
+            toggleShowSchedule();
+          }
+        });
+        btnPortada.addEventListener("mouseleave", () => {
+          if (!btnClick) {
+            showSchedule = false;
+            toggleShowSchedule();
+          }
+        });
+      }
+      btnPortada.addEventListener("click", (e) => {
+        e.stopPropagation();
+        btnClick = !btnClick;
+        showSchedule = btnClick;
+        toggleShowSchedule();
       });
     }
-    btnPortada.addEventListener("click", (e) => {
-      e.stopPropagation();
-      btnClick = !btnClick;
-      showSchedule = btnClick;
-      toggleShowSchedule();
-    });
-  }
-  function toggleShowSchedule() {
-    if (showSchedule) {
-      portadaEl.classList.add("show-schedule");
-    } else {
-      portadaEl.classList.remove("show-schedule");
+    function toggleShowSchedule() {
+      if (showSchedule) {
+        portadaEl.classList.add("show-schedule");
+      } else {
+        portadaEl.classList.remove("show-schedule");
+      }
     }
-  }
+  });
 })();
