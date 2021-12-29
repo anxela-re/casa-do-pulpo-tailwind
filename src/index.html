@@ -12,62 +12,271 @@
         <!-- do not remove this line! -->
         <title>A casa do pulpo</title>
     </head>
-    <body>
-        <header
-            class="
-                flex flex-row flex-wrap
-                justify-center
-                p-4
-                gap-4
-                md:justify-between
-            "
-        >
-            <a href="#" class="justify-center flex flex-col">
-                <img
-                    src="./assets/images/logo.svg"
-                    alt="A casa do pulpo"
-                    width="150"
-                    class="align-middle"
-                />
-            </a>
-            <nav>
-                <ul class="p-0 m-auto text-center">
-                    <li class="text-octopus_accent-500">
-                        <a
-                            href=""
-                            class="
-                                font-semibold
-                                hover-decoration-5 hover-underline-offset-3
-                            "
-                            >+Artistas</a
-                        >
+    <body class="h-screen m-0 overflow-x-hidden font-sans font-base bg-background">
+        <div class="portada">
+            <div
+                class="
+                    z-1
+                    m-2
+                    md:row-start-2 md:row-end-4 md:col-start-2 md:col-end-7
+                "
+            >
+                <h1 class="font-serif text-7xl text-current_play">
+                    El huérfano de los Zhao
+                </h1>
+            </div>
+            <div
+                class="
+                    bg-black bg-no-repeat bg-left-bottom bg-contain
+                    bg-image-current_play
+                    image__animation
+                    md:col-start-1 md:col-end-3 md:row-start-2 md:row-end-9
+                "
+            ></div>
+            <div
+                class="
+                    flex flex-col
+                    justify-center
+                    md:row-start-4 md:row-end-7 md:col-start-3 md:col-end-7
+                    lg:col-end-6
+                "
+            >
+                <p class="pl-4 font-sans font-extralight leading-relaxed">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Phasellus dignissim justo at augue sodales vestibulum.
+                    Integer ornare vitae eros et posuere. Aenean eu posuere
+                    odio. Duis in rutrum metus. Sed rhoncus ornare erat, vitae
+                    maximus odio cursus quis. Etiam finibus erat vitae lectus
+                    posuere pretium. Nunc eu sem sit amet lectus fringilla
+                    viverra. Proin nulla tortor, imperdiet id risus et, finibus
+                    viverra nisl.
+                </p>
+            </div>
+            <div
+                class="
+                    hidden
+                    font-medium
+                    color-black
+                    m-2
+                    md:row-start-4 md:row-end-7 md:col-start-4 md:col-end-7
+                    lg:col-end-6
+                "
+            >
+                <h2 class="text-4xl">Fechas y horarios</h2>
+                <p>26 noviembre - 6 de febrero</p>
+                <ul>
+                    <li>
+                        <p>Jueves</p>
+                        <div>
+                            <strong>19:30</strong>
+                        </div>
                     </li>
-                    <li class="text-gray-900">
-                        <a
-                            href="#"
-                            class="
-                                font-semibold
-                                hover-decoration-5 hover-underline-offset-3
-                            "
-                            >+Obra</a
-                        >
+                    <li>
+                        <p>Viernes</p>
+                        <div>
+                            <strong>20:30</strong>
+                        </div>
                     </li>
-                    <li class="text-gray-900">
-                        <a
-                            href="#"
-                            class="
-                                font-semibold
-                                hover-decoration-5 hover-underline-offset-3
-                            "
-                            >+El Teatro</a
-                        >
+                    <li>
+                        <p>Sábado</p>
+                        <div class="flex flex-col">
+                            <strong>17:00</strong>
+                            <strong>21:00</strong>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Domingo</p>
+                        <div class="flex flex-col">
+                            <strong>13:00</strong>
+                            <strong>19:30</strong>
+                        </div>
                     </li>
                 </ul>
-            </nav>
-        </header>
-
-
-
+            </div>
+            <div
+                class="
+                    hidden
+                    font-medium
+                    color-black
+                    m-2
+                    md:row-start-4 md:row-end-5 md:col-start-2 md:col-end-2
+                "
+            >
+                <h2 class="text-4xl">Precios</h2>
+                <ul>
+                    <li>
+                        En taquila, el día de la función <strong>12€</strong>
+                    </li>
+                    <li>Venta online y anticipada <strong>10€</strong></li>
+                </ul>
+            </div>
+            <div
+                class="
+                    hidden
+                    font-medium
+                    color-black
+                    m-2
+                    md:row.start.5 md:row-end-6 md:col-start-2 md:col-end-2
+                "
+            >
+                <div class="flex flex-row justify-between mt-4">
+                    <h2  class="text-4xl">Duración</h2>
+                    <h4 class="text-4xl"><strong> 90 min</strong></h4>
+                </div>
+            </div>
+            <div
+                class="
+                    grid
+                    tracking-widest
+                    uppercase
+                    color-white
+                    text-2xl
+                    m-2
+                    md:row-start-7 md:row-end-7 md:col-start-4 md:col-end-6
+                "
+            >
+                <a
+                    class="
+                        hover:font-semibold
+                        hover:underline
+                        hover-underline-offset-3
+                        hover-decoration-5
+                    "
+                    href="#"
+                    ><p class="text-right">Ver más</p></a
+                >
+            </div>
+            <div
+                class="
+                    w-full
+                    h-full
+                    bg-transparent
+                    border-none
+                    outline-none
+                    md:border-l-5
+                    md:border-solid
+                    md:border-white
+                    md:grid
+                    md:row-start-2
+                    md:row-end-4
+                    md:col-start-7
+                    md:col-end-7
+                    info-btn
+                "
+            >
+                <p
+                    class="
+                        h-full
+                        m-auto
+                        font-bolder
+                        leading-loose
+                        text-center
+                        md:text-lg md:uppercase md:tracking-widest
+                        writing-mode-info-btn
+                    "
+                >
+                    + Info
+                </p>
+            </div>
+            <div
+                class="
+                    z-1
+                    flex flex-col
+                    justify-center
+                    bg-gradient-to-r
+                    from-octopus-500
+                    via-octopus_accent-500
+                    to-octopus_bg-500
+                    md:row-start-9 md:row-end-9 md:col-span-full
+                    overflow-hidden
+                "
+            >
+                <div
+                    class="
+                        relative
+                        w-full
+                        h-4/5
+                        text-lg
+                        font-medium
+                        leading-4
+                        bg-white
+                    "
+                >
+                    <a
+                        href="#"
+                        class="
+                            hidden
+                            text-white
+                            h-full
+                            text-center
+                            hover:font-semibold hover:line-through
+                        "
+                        >+EL TEATRO</a
+                    >
+                    <p
+                        style="width: 2150px"
+                        class="
+                            absolute
+                            block
+                            overflow-hidden
+                            text-octopus-500
+                            whitespace-nowrap
+                            top-10px
+                            my-0
+                            mx-auto
+                        "
+                    >
+                        <span
+                            style="padding-left: 2150px"
+                            class="inline-block animation-move"
+                        >
+                            <span>Judit Sandoval</span>
+                            <span>Alba Maria Amador</span>
+                            <span>Leopoldo Cabrera</span>
+                            <span>Antonio Singh</span>
+                            <span>Celia Betancor</span>
+                            <span>Celestina Guirao</span>
+                            <span>Dani Soria</span>
+                            <span>Asier Tejedor</span>
+                            <span>Cynthia Andujar</span>
+                            <span>Paul Guirado</span>
+                            <span>Meritxell Rivera</span>
+                            <span>Maria-Ines Bonet</span>
+                        </span>
+                    </p>
+                    <p
+                        class="
+                            absolute
+                            top-10px
+                            block
+                            mx-0
+                            my-auto
+                            overflow-hidden
+                            whitespace-nowrap
+                        "
+                        style="width: 2150px"
+                    >
+                        <span
+                            class="inline-block animation-move_delay"
+                            style="padding-left: 2150px"
+                        >
+                            <span>Judit Sandoval</span>
+                            <span>Alba Maria Amador</span>
+                            <span>Leopoldo Cabrera</span>
+                            <span>Antonio Singh</span>
+                            <span>Celia Betancor</span>
+                            <span>Celestina Guirao</span>
+                            <span>Dani Soria</span>
+                            <span>Asier Tejedor</span>
+                            <span>Cynthia Andujar</span>
+                            <span>Paul Guirado</span>
+                            <span>Meritxell Rivera</span>
+                            <span>Maria-Ines Bonet</span>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
 
         <footer class="footer">
             <a

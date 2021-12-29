@@ -15,6 +15,7 @@ module.exports = {
       "5xl": "3rem",
       "6xl": "4rem",
       "7xl": "5rem",
+      "8xl": "6rem",
     },
     fontFamily: {
       sans: ["Raleway", "sans-serif"],
@@ -22,6 +23,8 @@ module.exports = {
     },
     colors: {
       white: "#fff",
+      black: '#000',
+      background: "#f2ecf3",
       gray: {
         50: "#fafafa",
         100: "#f4f4f5",
@@ -70,18 +73,61 @@ module.exports = {
         800: "#f85b34",
         900: "#f7471b",
       },
+      current_play: "#bb020e",
     },
     extend: {
       gridTemplateRows: {
         footer: "1fr 2fr 1fr 40px auto",
         footer_md: "1fr 40px",
+        portada: "1fr 2fr 1fr 50px 50px 50px",
+        portada_md: "1rem 100px 100px 1fr 1fr 1fr 40px 40px 40px",
+        portada_schedule: "1fr 3fr 2fr 1fr 50px 50px 50px",
+        portada_schedule_md: " 1rem 100px 100px 1fr 1fr 1fr 40px 40px 40px"
       },
       gridTemplateColumns: {
         footer: "1fr",
         footer_md: "2rem 1fr 3fr 1fr 2rem",
+        portada: "1fr",
+        portada_md: "10% 2fr 1fr 1fr 1fr 10% 50px",
+        portada_schedule_md: "10% 2fr 1fr 1fr 1fr 10% 50px"
       },
       maxWidth: {
         "150px": "150px",
+        "350px": "350px",
+        "540px": "540px",
+        "720px": "720px",
+        "960px": "960px",
+        "1140px": "1140px",
+        "1200px": "1200px",
+      },
+      height: {
+        "200px":"200px"
+      },
+      zIndex: {
+        1: "1",
+      },
+      gridRowStart: {
+        9: "9",
+      },
+      gridRowEnd: {
+        8: "8",
+        9: "9",
+      },
+      borderWidth: {
+        5: "5px",
+      },
+      inset: {
+        "10px": "10px",
+      },
+      keyframes: {
+        move: {
+          "0%": { transform: "translate(0,0)" },
+          "100%": { transform: "translate(-100%,0)" },
+        },
+      },
+      animation: {
+        move: "move 30s linear infinite",
+        move_delay: "move 30s 15s linear infinite"
       },
     },
   },

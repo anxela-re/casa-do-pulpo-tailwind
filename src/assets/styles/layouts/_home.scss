@@ -1,9 +1,77 @@
 @screen md {
-  header ul li::after, footer nav ul li::after  {
+  header ul li::after,
+  footer nav ul li::after {
     content: "|";
     padding: 1rem;
   }
-  header ul li:last-child::after, footer nav ul li:last-child::after {
+  header ul li:last-child::after,
+  footer nav ul li:last-child::after {
     content: "";
+  }
+}
+
+@layer components {
+  .footer {
+    @apply grid grid-cols-footer md:grid-cols-footer_md grid-rows-footer md:grid-rows-footer_md pt-8 pb-2 w-full gap-2 text-white text-center bg-gradient-to-r from-octopus-500 via-octopus_accent-500 to-octopus_bg-500;
+  }
+  nav ul li {
+    @apply block my-2 uppercase md:inline-block;
+    a {
+      @apply tracking-widest hover:underline hover:font-semibold;
+    }
+  }
+  .portada.show-schedule {
+    @apply grid-rows-portada_schedule md:grid-cols-portada_schedule_md md:grid-rows-portada_schedule_md bg-white bg-gradient-to-b md:bg-gradient-to-l from-white via-white to-current_play text-black;
+    h1 {
+      @apply text-black;
+    }
+    > div:nth-child(2),
+    > div:nth-child(3) {
+      @apply hidden;
+    }
+    > div:nth-child(4),
+    > div:nth-child(5),
+    > div:nth-child(6) {
+      @apply block;
+    }
+    .info-btn {
+      @apply bg-black text-white;
+    }
+  }
+  .portada {
+    @apply grid w-full h-screen bg-black grid-cols-portada md:grid-cols-portada_md
+    grid-rows-portada md:grid-rows-portada_md
+    bg-gradient-to-r from-black via-black to-current_play text-white;
+  }
+  .portada ul li {
+    @apply mb-4 mt-4 border-t border-b border-gray-900 border-solid flex flex-row justify-between;
+    p {
+      @apply mb-0;
+    }
+  }
+  .elenco__item {
+    @apply w-full max-w-350px p-2 text-black text-center;
+    img {
+      @apply w-full h-200px m-auto bg-gray-100;
+    }
+    .elenco__character {
+      @apply mt-4 font-semibold uppercase tracking-widest;
+    }
+    .elenco__artist {
+      @apply pt-1 text-sm mb-4;
+    }
+  }
+}
+
+.bg-image-current_play {
+  background-image: url("../images/theorphanofzhao.jpg");
+}
+
+.writing-mode-info-btn {
+  writing-mode: horizontal-tb;
+}
+@screen md {
+  .writing-mode-info-btn {
+    writing-mode: tb-rl;
   }
 }
